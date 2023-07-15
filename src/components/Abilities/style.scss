@@ -1,0 +1,230 @@
+@import "../../variables";
+.section-ability {
+  height: 120%;
+  margin-top: 8%;
+  // background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 5%;
+}
+.ability-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+.card-ability {
+  // background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  transition: all 0.5s;
+  cursor: pointer;
+  h1 {
+    font-size: 90px;
+  }
+}
+.card-ability:hover {
+  // background-color: red;
+  box-shadow: 4px 5px 15px rgb(0 0 0 / 0.5);
+}
+
+.modal {
+  outline: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: rgb(212 250 237 /0.7);
+  box-shadow: 0px 0px 20px rgb(0 0 0 /0.5);
+  backdrop-filter: blur(5px);
+  margin: auto;
+  height: 400px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  
+  h1 {
+    font-size: 90px;
+    height: 100px;
+  }
+  button {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    // background: $secondaryColor;
+    border: none;
+    padding: 10px 15px;
+    background-color: transparent;
+    border-radius: 0px 0px 0px 40px;
+    // box-shadow: -2px 2px 3px rgb(0 0 0 /0.5);
+    transition: all .3s;
+
+    
+    :first-child{
+      font-size: 30px;
+      font-weight: bold;
+    } 
+  }
+  button:hover{
+    background: rgb(0 0 0 /0.1);
+
+  }
+  p{
+    width: 80%;
+    
+  }
+  &.IsOpen{
+    animation: onModal .5s ease-in-out;
+  }
+}
+@keyframes onModal {
+  0%{
+    transform: scale(0.8);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 300px){
+  .section-ability{
+    height: 2300px;
+  }
+  .ability-div{
+    grid-template-columns: 1fr;
+  }
+  .modal{
+    height: 450px;
+    width: 250px;
+    h1{
+      font-size: 70px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (min-width: 301px) and (max-width: 360px){
+  .section-ability{
+    height: 2400px;
+  }
+  .ability-div{
+    grid-template-columns: 1fr;
+  }
+  .modal{
+    height: 450px;
+    width: 250px;
+    h1{
+      font-size: 70px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 600px){
+  .section-ability{
+    height: 1500px;
+  }
+  .ability-div{
+    grid-template-columns: 1fr 1fr;
+  }
+  .modal{
+    height: 450px;
+    width: 350px;
+    h1{
+      font-size: 70px;
+    }
+    p{
+      font-size: 14px;
+    }
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 950px){
+  .section-ability{
+    height: 1300px;
+  }
+  .ability-div{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .modal{
+    height: 550px;
+    width: 500px;
+    h1{
+      font-size: 90px;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 951px) and (max-width: 1115px){
+  .section-ability{
+    height: 1200px;
+  }
+  .ability-div{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .modal{
+    height: 500px;
+    width: 500px;
+    // top: 20%;
+    h1{
+      font-size: 90px;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1280px){  
+  .section-ability{
+   height: 110%;
+  }
+  .card-ability{
+    height: 350px;
+    width: 200px;
+    p{
+      font-size: 20px;
+    }
+  }
+}
+@media screen and (min-width: 1400px) and (max-width: 2001px){  
+  .section-ability{
+   height: 130%;
+  }
+  .card-ability{
+    height: 400px;
+    width: 250px;
+    p{
+      font-size: 25px;
+    }
+  }
+  .modal{
+    height: 500px;
+    width: 700px;
+    p{
+      font-size: 20px;
+    }
+  }
+}

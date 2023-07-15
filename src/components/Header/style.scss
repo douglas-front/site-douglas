@@ -1,0 +1,149 @@
+@import '../../variables';
+// transform: translateY(150%) rotate(45deg);
+// transform: translateY(-200%) rotate(-45deg);
+*{
+  text-decoration: none;
+  color: #000;
+}
+header {
+  position: relative;
+  width: 100vw;
+
+  nav {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 20px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background: $primaryColor;
+    box-shadow: 0 0 30px #000;
+  }
+  nav > ul{
+    display: flex;
+    
+    list-style: none;
+  }
+  nav > ul > li{
+    margin-left: 20px;
+  }
+  nav > ul > li > a{
+    position: relative;
+    
+    font-size: 20px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+  }
+  nav > ul > li > a::before{
+    content: '';
+    width: 0%;
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+
+    background: $secondaryColor;
+    
+    transition: all .4s;
+  }
+  nav > ul > li > a:hover::before{
+    width: 100%;
+  }
+  nav > div > h1{
+    font-size: 30px;
+    color: #000;
+    text-transform: uppercase;
+  }
+}
+.Btn-Mobile{
+   display: none;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    z-index: 2;
+ 
+    .sp{
+      display: block;
+      background: $secondaryColor;
+      height: 8px;
+      width: 40px;
+      border-radius: 3px;
+      transition: all .3s;
+    }
+    :not(:first-child){
+      margin-top: 5px;
+   }
+    .ln1.mobile-on{
+    transform: translateY(150%) rotate(45deg);
+   }
+    .ln2.mobile-on{
+    transform: translateY(-170%) rotate(-45deg);
+    }
+    .off.mobile-on{
+    opacity: 0;
+    }
+
+}
+.ul-mobile{
+  display: none;
+}
+.ul-mobile.mobile-on{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  list-style: none; 
+  gap: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000d2;
+  animation: nav-mobile 1s ease-in-out;
+ a{
+    position: relative;
+    font-size: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  a::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    height: 3px;
+    bottom: 0;
+    background: $secondaryColor;
+    animation: li 2s ease-in-out;
+  }
+  @keyframes li {
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 100%;
+    }
+  }
+}
+@keyframes nav-mobile {
+  0%{
+    opacity: 0;
+    width: 70%;
+  }
+  100%{
+    opacity: 1;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 200px) and (max-width: 900px){
+  .Header__navgation__links{
+    display: none;
+  }
+  .Btn-Mobile{
+    display: block;
+  }
+}
+

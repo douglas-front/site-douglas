@@ -1,0 +1,179 @@
+@import '../../variables';
+
+.secPrimary{
+  margin-top: 6%;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: url('../../img/simon-lee-m0N1Y4hjI2Q-unsplash.jpg') no-repeat center/cover;
+  background-attachment: fixed;
+  position: relative;
+  
+  .back{
+    background-color: rgb(0 0 0 /0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+  }
+   .sec-content{
+    margin-top: 7%;
+    width: 65%;
+    height: 110%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 20;
+    .btn-sec-primary{
+      padding: 15px 40px;
+      border: none;
+      border-radius: 5px;
+      background-color: transparent;
+      font-size: 15px;
+      border: 1px solid $secondaryColor;
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
+      margin-top: 20px;
+      color: #fff;
+
+     }
+    h1{
+      font-size: 40px;
+      text-transform: uppercase;
+      color: #fff;
+     }
+     p{
+      color: #fff;
+     }
+   }
+}
+a{
+  transition: all .7s;
+}
+.btn-sec-primary:hover a{
+  color: #fff;
+}
+.btn-sec-primary::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: $secondaryColor;
+  border-radius: 4px;
+  transition: all .5s;
+  z-index: -1;
+}
+.btn-sec-primary:hover::before{
+  width: 100%;
+}
+
+
+
+
+@media screen and (min-width: 200px) and (max-width: 280px){
+  .secPrimary{
+    height: 550px;
+    margin-top: 20%;
+    .sec-content{
+      width: 90%;
+      margin-top: 30%;
+      button{
+        padding: 10px 30px;
+        font-size: 10px;
+      }
+      h1{
+        font-size: 25px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 281px) and (max-width: 360px){
+  .secPrimary{
+    height: 530px;
+    margin-top: 20%;
+    .sec-content{
+      width: 90%;
+      margin-top: 20%;
+      button{
+        padding: 10px 40px;
+        font-size: 10px;
+      }
+      h1{
+        font-size: 30px;
+      }
+      p{
+        font-size: 13px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 361px) and (max-width: 450px){
+  .secPrimary{
+    height: 600px;
+    margin-top: 15%;
+    .sec-content{
+      width: 90%;
+      margin-top: 20%;
+      button{
+        padding: 10px 40px;
+        font-size: 13px;
+      }
+      h1{
+        font-size: 40px;
+      }
+      p{
+        font-size: 14px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 451px) and (max-width: 600px){
+  .secPrimary{
+    height: 650px;
+    margin-top: 12%;
+    .sec-content{
+      width: 90%;
+      margin-top: 10%;
+      button{
+        padding: 20px 40px;
+        font-size: 15px;
+      }
+      h1{
+        font-size: 50px;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 870px){
+  .secPrimary{
+    height: 700px;
+    .sec-content{
+      margin-top: 10%;
+      h1{
+        font-size: 50px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) and (max-width: 1300px){
+  .secPrimary{
+    height: 550px;
+    .sec-content{
+      h1{
+        font-size: 50px;
+      }
+    }
+  }
+}

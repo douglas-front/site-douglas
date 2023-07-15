@@ -1,0 +1,27 @@
+.error-div{
+  background: url("../../img/sebastian-svenson-d2w-_1LJioQ-unsplash.jpg") no-repeat center/cover;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .card-404{
+
+    background-color: rgb(0 0 0 / 0.5);
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3px;
+    backdrop-filter: blur(5px);
+    box-shadow: 20px 20px 10px  rgba(255, 0, 0, 0.1) , -20px -20px 10px rgba(4, 0, 255, 0.1) ;
+
+    h1{
+      font-size: 130px;
+      color: #fff;
+    }
+  }
+}
